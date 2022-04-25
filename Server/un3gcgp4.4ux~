@@ -1,0 +1,352 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace SocketServerGUI
+{
+    
+    public partial class Form1 : Form
+    {
+        SocketServer mServer;
+        public Form1(SocketServer _server)
+        {
+            Control.CheckForIllegalCrossThreadCalls = false;
+            InitializeComponent();
+            mServer = _server;
+        }
+
+        public void appendText(string _message)
+        {
+            serverDebugTextField.AppendText(_message);
+            serverDebugTextField.AppendText("\n");
+            serverDebugTextField.ScrollToCaret();
+        }
+
+
+        private void btnAcceptIncomingConnection_Click(object sender, EventArgs e)
+        {
+            if(portNumber.Text.Trim() == "")
+            {
+                portNumber.Text = "23000";
+            }
+            portNumber.Enabled = false;
+            portNumber.ReadOnly = true;
+            btnAcceptIncomingConnection.Enabled = false;
+            stopListening.Enabled = true;
+
+            mServer.StartListeningForIncomingConnection(port: Int32.Parse(portNumber.Text.Trim()));
+            
+
+            serverDebugTextField.AppendText("SERVER: Started listening on port " + mServer.mPort + "\n");
+        }
+
+
+
+
+        private void txtMessage_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSendAll_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtMessage.Text))
+            {
+                mServer.SendToAll(txtMessage.Text.Trim());
+                String dbgText = "SERVER: Sent a global message to clients: " + txtMessage.Text.Trim() + '\n';
+                serverDebugTextField.AppendText(dbgText);
+                txtMessage.Clear();
+            }
+        }
+
+        private void serverDebugTextField_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void portNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stopListening_Click(object sender, EventArgs e)
+        {
+            mServer.KeepRunning = false;
+            stopListening.Enabled = false;
+            btnAcceptIncomingConnection.Enabled = true;
+            portNumber.Enabled = true;
+            portNumber.ReadOnly = false;
+
+            mServer.StopServer();
+
+            serverDebugTextField.AppendText("SERVER: Stopped listening on port " + mServer.mPort + "\n");
+
+        }
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            mServer.StopServer();
+        }
+    }
+
+    public class SocketServer
+    {
+
+        IPAddress mIP;
+        public int mPort;
+        TcpListener mTCPListener;
+        Form1 form;
+        Dictionary<String, TcpClient> users;
+
+        List<TcpClient> mClients;
+
+        public void connectForm(Form1 _form)
+        {
+            form = _form;
+        }
+
+        public bool KeepRunning { get; set; } = true;
+
+        public SocketServer()
+        {
+            mClients = new List<TcpClient>();
+            users = new Dictionary<String, TcpClient>();
+
+
+            //Read the user database and store them inside a dictionary (dictionary type => username,int. int represents online status.)
+            using (StreamReader file = new StreamReader("C:\\Users\\Amet\\source\\repos\\SocketServerGUI\\user-db.txt"))
+            {
+                int counter = 0;
+                string ln;
+
+                while ((ln = file.ReadLine()) != null)
+                {
+                    Debug.WriteLine($"User {ln} has been added to database.");
+                    users.Add(ln, null);
+                    counter++;
+                }
+                file.Close();
+                Debug.WriteLine($"File has {counter} lines.");
+            }
+
+        }
+        public async void StartListeningForIncomingConnection(IPAddress ipaddr = null, int port = 23000)
+        {
+            if (ipaddr == null)
+            {
+                ipaddr = IPAddress.Any;
+            }
+
+            if (port <= 0)
+            {
+                port = 23000;
+            }
+
+            mIP = ipaddr;
+            mPort = port;
+
+            form.appendText(string.Format("SERVER: Started listening. IP Address: {0} - Port: {1}", mIP.ToString(), mPort));
+
+            mTCPListener = new TcpListener(mIP, mPort);
+
+            try
+            {
+                mTCPListener.Start();
+
+                KeepRunning = true;
+                while (KeepRunning)
+                {
+                    var returnedByAccept = await mTCPListener.AcceptTcpClientAsync();
+                    String username = getUsername(returnedByAccept);
+
+                    if (username != null)
+                    {
+                        mClients.Add(returnedByAccept);
+                        form.appendText(String.Format("SERVER: Client connected, count: {0} - username: {1}", mClients.Count, username));
+                        
+                        ClientService(returnedByAccept,username);
+                    }
+                    else
+                    {
+                        RemoveClient(returnedByAccept);
+                    }
+
+                }
+
+
+            }
+            catch (Exception excp)
+            {
+                Debug.WriteLine(excp.ToString());
+            }
+
+        }
+
+        private string getUsername(TcpClient clientParam)
+        {
+            NetworkStream stream = null;
+            StreamReader reader = null;
+
+            try
+            {
+                String message;
+                stream = clientParam.GetStream();
+                reader = new StreamReader(stream);
+
+                char[] buff = new char[64];
+
+                int nRet = reader.Read(buff, 0, buff.Length);
+                string username = new string(buff);
+                username = username.Replace("\0", string.Empty);
+
+                TcpClient tempClient = null;
+
+                if (users.ContainsKey(username)) // && !
+                {
+                    users.TryGetValue(username, out tempClient);
+                    if (tempClient == null)
+                    {
+                        message = $"200 - Succesfully logged in as {username}.\n";
+                        byte[] buffMessage = Encoding.ASCII.GetBytes(message);
+                        clientParam.GetStream().WriteAsync(buffMessage, 0, buffMessage.Length);
+
+                        users[username] = clientParam;
+                        return username;
+                    }
+                    else
+                    {
+                        message = $"404 - User {username} is already logged in!\n";
+                        byte[] buffMessage = Encoding.ASCII.GetBytes(message);
+                        clientParam.GetStream().WriteAsync(buffMessage, 0, buffMessage.Length);
+                        return null;
+                    }
+                    
+                }
+                else
+                {
+                    message = $"404 - User {username} does not exist!\n";
+                    byte[] buffMessage = Encoding.ASCII.GetBytes(message);
+                    clientParam.GetStream().WriteAsync(buffMessage, 0, buffMessage.Length);
+                    return null;
+                }
+
+
+            }
+            catch (Exception excp)
+            {
+                Debug.WriteLine(excp.ToString());
+                return null;
+            }
+        }
+
+        public void StopServer()
+        {
+            try
+            {
+                if (mTCPListener != null)
+                {
+                    mTCPListener.Stop();
+                }
+
+                foreach (TcpClient c in mClients)
+                {
+                    c.Close();
+                }
+
+                mClients.Clear();
+            }
+            catch (Exception excp)
+            {
+
+                Debug.WriteLine(excp.ToString());
+            }
+        }
+
+        private async void ClientService(TcpClient clientParam,String username)
+        {
+            NetworkStream stream = null;
+            StreamReader reader = null;
+
+            try
+            {
+                stream = clientParam.GetStream();
+                reader = new StreamReader(stream);
+
+                char[] buff = new char[64];
+
+                while (KeepRunning)
+                {
+                    Debug.WriteLine("\n\n*** Ready to read ***");
+
+                    int nRet = await reader.ReadAsync(buff, 0, buff.Length);
+
+                    Debug.WriteLine("Communications returned: " + nRet);
+
+                    if (nRet == 0)
+                    {
+                        RemoveClient(clientParam);
+                        users[username] = null;
+                        form.appendText($"Client disconnected, count: {mClients.Count} - username: {username}");
+                        Debug.WriteLine("Socket Disconnected");
+                        break;
+                    }
+
+                    string receivedText = new string(buff);
+
+                    form.appendText("[" + clientParam.Client.RemoteEndPoint + "] " + "CLIENT: "  + receivedText);
+
+                    Array.Clear(buff, 0, buff.Length);
+
+                }
+            }
+            catch (Exception excp)
+            {
+                RemoveClient(clientParam);
+                Debug.WriteLine(excp.ToString());
+            }
+
+        }
+
+        private void RemoveClient(TcpClient clientParam)
+        {
+            if (mClients.Contains(clientParam))
+            {
+                clientParam.GetStream().Close();
+                clientParam.Close();
+                mClients.Remove(clientParam);
+                
+            }
+        }
+
+        public async void SendToAll(string message)
+        {
+            if (string.IsNullOrEmpty(message))
+                return;
+
+            try
+            {
+                message += '\n';
+                byte[] buffMessage = Encoding.ASCII.GetBytes(message);
+
+                foreach (TcpClient client in mClients)
+                {
+                    client.GetStream().WriteAsync(buffMessage, 0, buffMessage.Length);
+                }
+
+            }
+            catch (Exception excp)
+            {
+                Debug.WriteLine(excp.ToString());
+            }
+        }
+    }
+}

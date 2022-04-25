@@ -1,0 +1,108 @@
+C:\Users\Amet\source\repos\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.exe
+C:\Users\Amet\source\repos\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.deps.json
+C:\Users\Amet\source\repos\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.runtimeconfig.json
+C:\Users\Amet\source\repos\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.runtimeconfig.dev.json
+C:\Users\Amet\source\repos\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.dll
+C:\Users\Amet\source\repos\SocketServerGUI\bin\Debug\net5.0-windows\ref\SocketServerGUI.dll
+C:\Users\Amet\source\repos\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.pdb
+C:\Users\Amet\source\repos\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.csproj.AssemblyReference.cache
+C:\Users\Amet\source\repos\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.csproj.GenerateResource.cache
+C:\Users\Amet\source\repos\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Amet\source\repos\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.AssemblyInfoInputs.cache
+C:\Users\Amet\source\repos\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.AssemblyInfo.cs
+C:\Users\Amet\source\repos\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.csproj.CoreCompileInputs.cache
+C:\Users\Amet\source\repos\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.dll
+C:\Users\Amet\source\repos\SocketServerGUI\obj\Debug\net5.0-windows\ref\SocketServerGUI.dll
+C:\Users\Amet\source\repos\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.pdb
+C:\Users\Amet\source\repos\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.genruntimeconfig.cache
+C:\Users\Amet\source\repos\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.Form1.resources
+D:\Users\suuser\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.dll
+D:\Users\suuser\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\ref\SocketServerGUI.dll
+D:\Users\suuser\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.pdb
+D:\Users\suuser\Desktop\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.exe
+D:\Users\suuser\Desktop\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.deps.json
+D:\Users\suuser\Desktop\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.runtimeconfig.json
+D:\Users\suuser\Desktop\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.runtimeconfig.dev.json
+D:\Users\suuser\Desktop\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.dll
+D:\Users\suuser\Desktop\SocketServerGUI\bin\Debug\net5.0-windows\ref\SocketServerGUI.dll
+D:\Users\suuser\Desktop\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.pdb
+D:\Users\suuser\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.csproj.AssemblyReference.cache
+D:\Users\suuser\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.Form1.resources
+D:\Users\suuser\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.csproj.GenerateResource.cache
+D:\Users\suuser\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\suuser\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.AssemblyInfoInputs.cache
+D:\Users\suuser\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.AssemblyInfo.cs
+D:\Users\suuser\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.csproj.CoreCompileInputs.cache
+D:\Users\suuser\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.genruntimeconfig.cache
+C:\Users\Amet\Desktop\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.exe
+C:\Users\Amet\Desktop\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.deps.json
+C:\Users\Amet\Desktop\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.runtimeconfig.json
+C:\Users\Amet\Desktop\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.runtimeconfig.dev.json
+C:\Users\Amet\Desktop\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.dll
+C:\Users\Amet\Desktop\SocketServerGUI\bin\Debug\net5.0-windows\ref\SocketServerGUI.dll
+C:\Users\Amet\Desktop\SocketServerGUI\bin\Debug\net5.0-windows\SocketServerGUI.pdb
+C:\Users\Amet\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.csproj.AssemblyReference.cache
+C:\Users\Amet\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.Form1.resources
+C:\Users\Amet\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.csproj.GenerateResource.cache
+C:\Users\Amet\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Amet\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.AssemblyInfoInputs.cache
+C:\Users\Amet\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.AssemblyInfo.cs
+C:\Users\Amet\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.csproj.CoreCompileInputs.cache
+C:\Users\Amet\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.dll
+C:\Users\Amet\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\ref\SocketServerGUI.dll
+C:\Users\Amet\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.pdb
+C:\Users\Amet\Desktop\SocketServerGUI\obj\Debug\net5.0-windows\SocketServerGUI.genruntimeconfig.cache
+C:\Users\Amet\Desktop\Yeni klasör\Server\bin\Debug\net5.0-windows\SocketServerGUI.exe
+C:\Users\Amet\Desktop\Yeni klasör\Server\bin\Debug\net5.0-windows\SocketServerGUI.deps.json
+C:\Users\Amet\Desktop\Yeni klasör\Server\bin\Debug\net5.0-windows\SocketServerGUI.runtimeconfig.json
+C:\Users\Amet\Desktop\Yeni klasör\Server\bin\Debug\net5.0-windows\SocketServerGUI.runtimeconfig.dev.json
+C:\Users\Amet\Desktop\Yeni klasör\Server\bin\Debug\net5.0-windows\SocketServerGUI.dll
+C:\Users\Amet\Desktop\Yeni klasör\Server\bin\Debug\net5.0-windows\ref\SocketServerGUI.dll
+C:\Users\Amet\Desktop\Yeni klasör\Server\bin\Debug\net5.0-windows\SocketServerGUI.pdb
+C:\Users\Amet\Desktop\Yeni klasör\Server\obj\Debug\net5.0-windows\SocketServerGUI.csproj.AssemblyReference.cache
+C:\Users\Amet\Desktop\Yeni klasör\Server\obj\Debug\net5.0-windows\SocketServerGUI.Form1.resources
+C:\Users\Amet\Desktop\Yeni klasör\Server\obj\Debug\net5.0-windows\SocketServerGUI.csproj.GenerateResource.cache
+C:\Users\Amet\Desktop\Yeni klasör\Server\obj\Debug\net5.0-windows\SocketServerGUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Amet\Desktop\Yeni klasör\Server\obj\Debug\net5.0-windows\SocketServerGUI.AssemblyInfoInputs.cache
+C:\Users\Amet\Desktop\Yeni klasör\Server\obj\Debug\net5.0-windows\SocketServerGUI.AssemblyInfo.cs
+C:\Users\Amet\Desktop\Yeni klasör\Server\obj\Debug\net5.0-windows\SocketServerGUI.csproj.CoreCompileInputs.cache
+C:\Users\Amet\Desktop\Yeni klasör\Server\obj\Debug\net5.0-windows\SocketServerGUI.dll
+C:\Users\Amet\Desktop\Yeni klasör\Server\obj\Debug\net5.0-windows\ref\SocketServerGUI.dll
+C:\Users\Amet\Desktop\Yeni klasör\Server\obj\Debug\net5.0-windows\SocketServerGUI.pdb
+C:\Users\Amet\Desktop\Yeni klasör\Server\obj\Debug\net5.0-windows\SocketServerGUI.genruntimeconfig.cache
+C:\Users\Amet\source\repos\Server\bin\Debug\net5.0-windows\SocketServerGUI.exe
+C:\Users\Amet\source\repos\Server\bin\Debug\net5.0-windows\SocketServerGUI.deps.json
+C:\Users\Amet\source\repos\Server\bin\Debug\net5.0-windows\SocketServerGUI.runtimeconfig.json
+C:\Users\Amet\source\repos\Server\bin\Debug\net5.0-windows\SocketServerGUI.runtimeconfig.dev.json
+C:\Users\Amet\source\repos\Server\bin\Debug\net5.0-windows\SocketServerGUI.dll
+C:\Users\Amet\source\repos\Server\bin\Debug\net5.0-windows\ref\SocketServerGUI.dll
+C:\Users\Amet\source\repos\Server\bin\Debug\net5.0-windows\SocketServerGUI.pdb
+C:\Users\Amet\source\repos\Server\obj\Debug\net5.0-windows\SocketServerGUI.csproj.AssemblyReference.cache
+C:\Users\Amet\source\repos\Server\obj\Debug\net5.0-windows\SocketServerGUI.Form1.resources
+C:\Users\Amet\source\repos\Server\obj\Debug\net5.0-windows\SocketServerGUI.csproj.GenerateResource.cache
+C:\Users\Amet\source\repos\Server\obj\Debug\net5.0-windows\SocketServerGUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Amet\source\repos\Server\obj\Debug\net5.0-windows\SocketServerGUI.AssemblyInfoInputs.cache
+C:\Users\Amet\source\repos\Server\obj\Debug\net5.0-windows\SocketServerGUI.AssemblyInfo.cs
+C:\Users\Amet\source\repos\Server\obj\Debug\net5.0-windows\SocketServerGUI.csproj.CoreCompileInputs.cache
+C:\Users\Amet\source\repos\Server\obj\Debug\net5.0-windows\SocketServerGUI.dll
+C:\Users\Amet\source\repos\Server\obj\Debug\net5.0-windows\ref\SocketServerGUI.dll
+C:\Users\Amet\source\repos\Server\obj\Debug\net5.0-windows\SocketServerGUI.pdb
+C:\Users\Amet\source\repos\Server\obj\Debug\net5.0-windows\SocketServerGUI.genruntimeconfig.cache
+C:\Users\Amet\Desktop\Server\bin\Debug\net5.0-windows\SocketServerGUI.exe
+C:\Users\Amet\Desktop\Server\bin\Debug\net5.0-windows\SocketServerGUI.deps.json
+C:\Users\Amet\Desktop\Server\bin\Debug\net5.0-windows\SocketServerGUI.runtimeconfig.json
+C:\Users\Amet\Desktop\Server\bin\Debug\net5.0-windows\SocketServerGUI.runtimeconfig.dev.json
+C:\Users\Amet\Desktop\Server\bin\Debug\net5.0-windows\SocketServerGUI.dll
+C:\Users\Amet\Desktop\Server\bin\Debug\net5.0-windows\ref\SocketServerGUI.dll
+C:\Users\Amet\Desktop\Server\bin\Debug\net5.0-windows\SocketServerGUI.pdb
+C:\Users\Amet\Desktop\Server\obj\Debug\net5.0-windows\SocketServerGUI.csproj.AssemblyReference.cache
+C:\Users\Amet\Desktop\Server\obj\Debug\net5.0-windows\SocketServerGUI.Form1.resources
+C:\Users\Amet\Desktop\Server\obj\Debug\net5.0-windows\SocketServerGUI.csproj.GenerateResource.cache
+C:\Users\Amet\Desktop\Server\obj\Debug\net5.0-windows\SocketServerGUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Amet\Desktop\Server\obj\Debug\net5.0-windows\SocketServerGUI.AssemblyInfoInputs.cache
+C:\Users\Amet\Desktop\Server\obj\Debug\net5.0-windows\SocketServerGUI.AssemblyInfo.cs
+C:\Users\Amet\Desktop\Server\obj\Debug\net5.0-windows\SocketServerGUI.csproj.CoreCompileInputs.cache
+C:\Users\Amet\Desktop\Server\obj\Debug\net5.0-windows\SocketServerGUI.dll
+C:\Users\Amet\Desktop\Server\obj\Debug\net5.0-windows\ref\SocketServerGUI.dll
+C:\Users\Amet\Desktop\Server\obj\Debug\net5.0-windows\SocketServerGUI.pdb
+C:\Users\Amet\Desktop\Server\obj\Debug\net5.0-windows\SocketServerGUI.genruntimeconfig.cache
